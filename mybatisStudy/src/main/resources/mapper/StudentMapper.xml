@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haer.mybatisstudy.mapper.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="com.haer.mybatisstudy.domain.Student">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name
+    </sql>
+    <insert id="insertBatch">
+        insert into student (name) values
+        <foreach collection="list" item="student" separator=",">
+            (#{student.name})
+        </foreach>
+    </insert>
+    <select id="findStudents" resultType="com.haer.mybatisstudy.domain.Student">
+        select * from student
+    </select>
+    <select id="countAll" resultType="java.lang.Integer">
+        select count(*) from student
+    </select>
+
+</mapper>

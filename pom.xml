@@ -8,6 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>jdk8-relate</module>
+        <module>rabbitMq</module>
+        <module>redisStudy</module>
+        <module>算法</module>
     </modules>
     <name>studyRecord</name>
     <description>Demo project for Spring Boot</description>
