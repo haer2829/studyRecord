@@ -11,6 +11,7 @@
         <module>rabbitMq</module>
         <module>redisStudy</module>
         <module>算法</module>
+        <module>码农会锁</module>
     </modules>
     <name>studyRecord</name>
     <description>Demo project for Spring Boot</description>
